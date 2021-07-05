@@ -1,4 +1,4 @@
-package kv
+package _go
 
 import (
 	"github.com/nadilas/temporal-plugins/hashicorp/kv/kvpb"

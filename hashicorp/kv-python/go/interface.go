@@ -1,4 +1,4 @@
-package kv
+package _go
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"github.com/hashicorp/go-plugin"
 )
 
-const PluginName = "kv"
+const PluginName = "kv_python"
 
 // Command is the default command to start up the plugin.
 // It uses KV_PLUGIN env var for the name of the executable

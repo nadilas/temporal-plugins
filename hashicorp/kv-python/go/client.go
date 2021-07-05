@@ -1,7 +1,7 @@
-package kv
+package _go
 
 import (
-	"github.com/nadilas/temporal-plugins/hashicorp/kv/kvpb"
+	"github.com/nadilas/temporal-plugins/hashicorp/kv-python/kvpb"
 	"golang.org/x/net/context"
 )
 

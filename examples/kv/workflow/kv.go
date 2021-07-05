@@ -3,7 +3,7 @@ package workflow
 import (
 	"time"
 
-	"github.com/nadilas/temporal-plugins/hashicorp/kv"
+	kv "github.com/nadilas/temporal-plugins/hashicorp/kv/go"
 	"go.temporal.io/sdk/workflow"
 )
 
@@ -18,7 +18,7 @@ func KVManipulator(ctx workflow.Context, key string) (string, error) {
 	if err := workflow.ExecuteActivity(ao, kv.KV.Get, key).Get(ctx, &val1); err != nil {
 		return "", err
 	}
-	if err := workflow.ExecuteActivity(ao, kv.KV.Put, key, []byte(string(val1) + "\nvalue 2")).Get(ctx, nil); err != nil {
+	if err := workflow.ExecuteActivity(ao, kv.KV.Put, key, []byte(string(val1)+"\nvalue 2")).Get(ctx, nil); err != nil {
 		return "", err
 	}
 	var final []byte

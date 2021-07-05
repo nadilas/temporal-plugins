@@ -7,7 +7,7 @@ import (
 
 	"github.com/hashicorp/go-plugin"
 	"github.com/nadilas/temporal-plugins/examples/kv/workflow"
-	"github.com/nadilas/temporal-plugins/hashicorp/kv"
+	kv "github.com/nadilas/temporal-plugins/hashicorp/kv/go"
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 )

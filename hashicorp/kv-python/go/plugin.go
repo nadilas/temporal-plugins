@@ -1,4 +1,4 @@
-package kv_python
+package _go
 
 import (
 	"context"
@@ -21,7 +21,7 @@ func (p *Plugin) GRPCServer(
 	broker *plugin.GRPCBroker,
 	s *grpc.Server,
 ) error {
-	// no-op
+	kvpb.RegisterKVServer(s, &GRPCServer{Impl: p.Impl})
 	return nil
 }
 
