@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 
 	"github.com/hashicorp/go-plugin"
-	"github.com/nadilas/temporal-plugins/hashicorp/kv"
+	kv "github.com/nadilas/temporal-plugins/hashicorp/kv/go"
 )
 
 // KV Here is a real implementation of KV that writes to a local file with
